@@ -6,30 +6,22 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Check Status') {
+        stage('Build') {
             steps {
-                bat 'git status'
+                
+                bat 'echo "hello sahil we are Building the website..."'
             }
         }
-        stage('Add Changes') {
-            steps {
-                bat 'git add .'
-            }
-        }
-        stage('Commit Changes') {
+        stage('Deploy') {
             steps {
                 script {
-                    try {
-                        bat 'git commit -m "Deployed using Jenkins"'
-                    } catch (Exception e) {
-                        echo "Error during git commit: ${e.message}"
-                    }
+                   
+                    bat 'git config --global user.email "baadalrazz@gmail.com"'
+                    bat 'git config --global user.name "sahilrazz"'
+                    bat 'git add .'
+                    bat 'git commit -m "Deployed using jenkins "'
+                    bat 'git push origin master --force'
                 }
-            }
-        }
-        stage('Push Changes') {
-            steps {
-                bat 'git push origin master'
             }
         }
     }
