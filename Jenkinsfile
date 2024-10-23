@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 
-                sh 'echo "hello sahil we are Building the website..."'
+                bat 'echo "hello sahil we are Building the website..."'
             }
         }
         stage('Deploy') {
