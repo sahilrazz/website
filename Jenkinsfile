@@ -16,11 +16,11 @@ pipeline {
             steps {
                 script {
                    
-                    sh 'git config --global user.email "baadalrazz@gmail.com"'
-                    sh 'git config --global user.name "sahilrazz"'
-                    sh 'git add .'
-                    sh 'git commit -m "Deployed using jenkins "'
-                    sh 'git push origin master --force'
+                    bat 'git config --global user.email "baadalrazz@gmail.com"'
+                    bat 'git config --global user.name "sahilrazz"'
+                    bat 'git add .'
+                    bat 'git commit -m "Deployed using jenkins "'
+                    bat 'git push origin master --force'
                 }
             }
         }
