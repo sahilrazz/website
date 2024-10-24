@@ -36,8 +36,10 @@ pipeline {
                     bat 'git config --global user.email "baadalrazz@gmail.com"'
                     bat 'git config --global user.name "sahilrazz"'
                     bat 'git add .'
-                    bat 'git commit -m "Deployed using jenkins "'
-                    bat 'git push origin master --force'
+                    bat 'echo "git commit -m "build done"'
+                    bat 'echo "git push -U origin master"'
+                    // bat 'git commit -m "Deployed using jenkins "'
+                    // bat 'git push origin master --force'
                 }
             }
         }
