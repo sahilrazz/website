@@ -11,7 +11,7 @@ pipeline {
                 
                 bat 'echo "hello sahil we are Building the website..."'
                 // bat 'npm install'
-                bat 'npm run build'
+                // bat 'npm run build'
                  // Modify the HTML file here
                 sh '''
                 # Define the file to modify
